@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+    <h1>UFO and Meteorite Landing in the World</h1>
+</head>
+
+<body>
+
+    <div id="bar_chart"></div>
+
+    <script type="text/javascript">
+        var data_location = "data/nuforc_reports.csv"
+
+        // var spec2 = "js/bar_chart.vg.json";
+        var spec2 = "js/bar_chart.vg.json"
+
+        vegaEmbed('#bar_chart', spec2).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+
+    <p>It can be observed that over the years, the number of UFO reported or observed increase. This may be due to the advancement of human technology.</p>
+
+    <div id="line_chart"></div>
+
+    <script type="text/javascript">
+        var data_location = "data/Meteorite_Landings.csv"
+
+        // var spec2 = "js/bar_chart.vg.json";
+        var spec3 = "js/line_chart.vg.json"
+
+        vegaEmbed('#line_chart', spec3).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+</body>
+
+</html>
