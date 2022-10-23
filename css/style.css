@@ -3,8 +3,6 @@
 	bottom: 100px; 
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
 }
 
 #line_chart {
@@ -12,6 +10,22 @@
 	bottom: 100px; 
 	left: 100px;
 	right: 100px;
+}
+
+#c_align {
+    text-align: center;
+    border: 1px solid black;
+}
+
+#symbol_map {
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
+}
+
+.background {
+	background-color: antiquewhite;
 }
