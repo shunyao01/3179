@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of meteorite reported over the years",
+    "title": "Number of Meteorite reported over the years",
     "width": 800,
     "height": 600,
     "data": { "url": "data/Meteorite_Landings.csv" },
