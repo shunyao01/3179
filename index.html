@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head id="background">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -9,12 +9,29 @@
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
-    <h1>UFO and Meteorite Landing in the World</h1>
+    <h1 text-align: center>UFO and Meteorite Landing in the World</h1>
 </head>
 
-<body>
+<body style ="background-color:cornsilk;">
 
-    <div id="bar_chart"></div>
+    <div id="symbol_map"></div>
+    <script type="text/javascript">
+
+    var spec2 = "js/symbol_map.vg.json";
+    vegaEmbed('#symbol_map', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    </script>
+    
+    <p>
+        The visualization shown is the number of UFO reported in US.
+        <br>
+        The duration of the UFO appearing is shown by the colour luminance.
+        <br>
+        The number of UFO reported is represented using the size of dot.
+    </p>
+
+    <div id="bar_chart" style="background-color:cornsilk"></div>
 
     <script type="text/javascript">
         var data_location = "data/nuforc_reports.csv"
@@ -27,9 +44,12 @@
         }).catch(console.error);
     </script>
 
-    <p>It can be observed that over the years, the number of UFO reported or observed increase. This may be due to the advancement of human technology.</p>
+    <p>
+        It can be observed that over the years, the number of UFO reported or observed increase. 
+        This may be due to the advancement of human technology.
+    </p>
 
-    <div id="line_chart"></div>
+    <div id="line_chart" style="background-color:cornsilk"></div>
 
     <script type="text/javascript">
         var data_location = "data/Meteorite_Landings.csv"
@@ -41,6 +61,23 @@
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
+
+    <p>
+        The line chart above display the number of meteorite landings over the years. 
+        <br>
+        The number of meteorites reported is incresing over the years. 
+        <br>
+        All the meteorites come from our solar system. 
+        <br>
+        They can be the small parts from big astronomical object like stars,satellites or planets.
+        <br>
+        They can also be pieces from the solar's system asteriod belt.
+        <br>
+        All the meteorites orbit the Sun for a period of time before colliding with Earth.
+        <br>
+        The duration of orbiting before colliding can be millions of years!
+    </p>
+
 </body>
 
 </html>
